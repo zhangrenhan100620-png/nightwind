@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nightwind-audit"
+version = "0.1.0a1"
+description = "A dependency-free repository readiness auditor for open-source maintainers."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+  { name = "Renan Zhang" },
+]
+keywords = ["open-source", "repository", "maintenance", "security", "audit"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.urls]
+Homepage = "https://github.com/zhangrenhan100620-png/nightwind"
+Issues = "https://github.com/zhangrenhan100620-png/nightwind/issues"
+Security = "https://github.com/zhangrenhan100620-png/nightwind/security/policy"
+
+[project.scripts]
+nightwind = "nightwind.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
